@@ -1,0 +1,30 @@
+[project]
+name = "snake"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "dawn-031415", email = "1750126585@qq.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "rich>=15.0.0",
+]
+
+[project.scripts]
+snake = "snake:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+preview = true
+line-length = 80
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "C90", "B", "E501"]
+ignore = ["F403", "F405"]
+
+[tool.ruff.format]
+quote-style = 'single'
